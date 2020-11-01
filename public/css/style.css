@@ -1,0 +1,17 @@
+h1 {
+    font-family: 'Grandstander', cursive;
+}
+header {
+    display: flex;
+    flex-wrap: wrap;
+}
+ul {
+ width: 100%;
+ list-style: none;
+ 
+}
+li {
+    display: table-cell;
+    padding: 0 20px 0 20px;
+    
+}
