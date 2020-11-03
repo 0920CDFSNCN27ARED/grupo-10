@@ -1,9 +1,24 @@
-h1 {
+body{
+    
+}
+
+.title {
     font-family: 'Grandstander', cursive;
+    text-align: center;
 }
 header {
-    display: flex;
+    box-sizing: border-box;
     flex-wrap: wrap;
+    background-color: #ff1616;
+}
+.img-logo{
+    width: 50%;
+}
+.nav-list{
+    background-color: #ffde59;
+    box-sizing: border-box;
+    width: 100%;
+
 }
 ul {
  width: 100%;
