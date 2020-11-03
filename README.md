@@ -17,3 +17,7 @@ Inspiración del mercado:
 
 ¿Por qué los elegimos?
 Nos inspiramos en los sitios anteriores por distintos motivos. Uno es el claro pilar del ecommerce Argentino, Dafiti centra su oferta en moda (indumentaria, calzado, accesorios). También buscamos dos marcas que apuntan al perfil especifico de nuestra audiencia (niños) y por último, seleccionamos un perfil de Instagram que reúne productoras de calzado del país y que sirve como muestrario. 
+
+> Link al tablero de Trello.
+
+https://trello.com/b/Xsrl7l17/0920-grupo-10-proyecto-final
