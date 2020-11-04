@@ -1,4 +1,5 @@
 body{
+    /*background: #ff1616;*/
     
 }
 
@@ -6,27 +7,69 @@ body{
     font-family: 'Grandstander', cursive;
     text-align: center;
 }
+
 header {
-    box-sizing: border-box;
+    display: flex;
     flex-wrap: wrap;
-    background-color: #ff1616;
-}
-.img-logo{
-    width: 50%;
-}
-.nav-list{
-    background-color: #ffde59;
     box-sizing: border-box;
+    background-color: #ff1616;
+    height: 200px;
+}
+
+.img-logo {
+    width: 30%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.nav-list {
+    background-color: #ffde59;
+    margin: 0 auto;
     width: 100%;
 
 }
+
 ul {
  width: 100%;
  list-style: none;
+
  
 }
+
 li {
     display: table-cell;
     padding: 0 20px 0 20px;
+    width: 30%;
     
+}
+
+a {
+    text-decoration: none;
+}
+
+content {
+    margin: 0 auto;
+    max-width: 900px;
+}
+section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    width: 30%;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+}
+
+article img {
+    width: 100%;
+}
+
+content h2 {
+    margin-top: 80px;
+    text-align: center;
 }
