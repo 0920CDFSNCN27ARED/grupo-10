@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="css/style.css">
-
-    <title>Litlle BU!</title>
+    <title>Register!</title>
 </head>
 <body>
-    <h1>Productos</h1>
     <header>
     <!--En el header puse barra de navegacion y logo falta el buscador-->
         <img class="img-logo" src="/img/Little Bu.png" alt="img-logo">
@@ -24,4 +21,21 @@
             </ul>
         </div>
     </header>
+    <content>
+        <h2>Crea tu cuenta</h2>
+        <form class="form-reg-log" action="/" method="POST">
+            <p><label for="name">Nombre Completo</label></p>
+            <input type="text" id="name" name="full-name" placeholder="Ingrese Nombre Completo">
+            <p><label for="">Apellido</label></p>
+            <input type="text" id="last-name" name="last-name" placeholder="Ingrese Apellido">
+            <p><label for="username">Nombre de Usuario</label></p>
+            <input type="text" id="username" name="username" placeholder="Ingrese Nombre de Usuario">
+            <p><label for="">Sexo</label></p>
+            <span>
+                <input type="radio"> 
+            </span>
+        </form>
+    </content>
+    
 </body>
+</html>
