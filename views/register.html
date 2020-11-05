@@ -7,35 +7,58 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Register!</title>
 </head>
-<body>
-    <header>
+<header>
     <!--En el header puse barra de navegacion y logo falta el buscador-->
-        <img class="img-logo" src="/img/Little Bu.png" alt="img-logo">
-        <div class="nav-list">
-            <ul class="primary-list">
-                <li class="list"><a href="/"> Home</a></li>
-                <li class="list"><a href="/products"> Producto </a></li>
-                <li class="list"><a href="/cart"> Carrito</a></li>
-                <li class="list"><a href="/Login"> Ingreso</a></li>
-                <li class="list"><a href="/register"> Registrate</a></li>
-            </ul>
-        </div>
-    </header>
+    <img class="img-logo" src="/img/Little Bu.png" alt="img-logo">
+    <div class="nav-list">
+        <ul class="primary-list">
+            <li class="list"><a href="/"> Home</a></li>
+            <li class="list"><a href="/products"> Producto </a></li>
+            <li class="list"><a href="/cart"> Carrito</a></li>
+            <li class="list"><a href="/Login"> Ingreso</a></li>
+            <li class="list"><a href="/register"> Registrate</a></li>
+        </ul>
+    </div>
+</header>
+<body>
     <content>
         <h2>Crea tu cuenta</h2>
-        <form class="form-reg-log" action="/" method="POST">
-            <p><label for="name">Nombre Completo</label></p>
-            <input type="text" id="name" name="full-name" placeholder="Ingrese Nombre Completo">
-            <p><label for="">Apellido</label></p>
-            <input type="text" id="last-name" name="last-name" placeholder="Ingrese Apellido">
-            <p><label for="username">Nombre de Usuario</label></p>
-            <input type="text" id="username" name="username" placeholder="Ingrese Nombre de Usuario">
-            <p><label for="">Sexo</label></p>
-            <span>
-                <input type="radio"> 
-            </span>
+        <form action="/" method="POST">
+            <p><label for="name">Nombre Completo:</label></p>
+            <input type="text" id="name" name="full-name" placeholder="Ingrese nombre completo">
+
+            <p><label for="last-name">Apellido:</label></p>
+            <input type="text" id="last-name" name="last-name" placeholder="Ingrese apellido">
+
+            <p><label for="date">Fecha de nacimiento</label></p>
+            <input type="date" id="date" name="date" >
+
+            <p><label for="username">Nombre de Usuario:</label></p>
+            <input type="text" id="username" name="username" placeholder="Ingrese nombre de usuario">
+
+            <p><label for="email">E-mail</label></p>
+            <input type="email" id="email" name="email" placeholder="Ingresa tu e-mail">
+
+            <p><label for="password">Crea tu Contraseña</label></p>
+            <input type="password" id="password" name="password" placeholder="Ingresa nueva contraseña">
+
+            <span><p><label for="">Sexo:</label></p></span>
+            <span><input type="radio" name="sex"> Masculino</span>
+            <span><input type="radio" name="sex"> Femenino</span>
+            <span><input type="radio" name="sex"> Otros</span>
+
+            <p>
+                <button type="submit">Registrar</button>
+                <button type="reset">Limpiar</button>
+            </p>
+            
         </form>
-    </content>
-    
+    </content>    
 </body>
+<footer>
+
+    <h3>aca va el footer</h3>
+    <!--Medios de pagos, envios, copyright, contacto, ver iconos para agregar-->
+
+</footer>
 </html>

@@ -7,7 +7,7 @@ app.listen(3000, () => {
     console.log('Servidor funcionando en puerto 3000');
 })
 
-app.get('/', (req, res)=>{
+app.all('/', (req, res)=>{
     res.sendFile(__dirname + '/views/index.html')
 });
 

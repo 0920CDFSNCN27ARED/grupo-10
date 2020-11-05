@@ -1,7 +1,6 @@
-body{
+body {
     /*background: #ff1616;*/
-    font-family: 'Grandstander';
-    
+    font-family: 'Grandstander';     
 }
 
 .title {
@@ -27,21 +26,17 @@ header {
     background-color: #ffde59;
     margin: 0 auto;
     width: 100%;
-
 }
 
 ul {
  width: 100%;
- list-style: none;
-
- 
+ list-style: none; 
 }
 
 li {
     display: table-cell;
     padding: 0 20px 0 20px;
-    width: 550px; 
-    
+    width: 550px;     
 }
 
 a {
@@ -53,12 +48,17 @@ content {
     max-width: 900px;
 }
 
-.form-reg-log {
+form {
+    text-align: center;
+}
+
+input {
     border-radius: 5px;
 }
 
 input:hover {
-    background-color: #ff1616;
+    background-color: #ffde59;
+    border-radius: 5px;
 }
 
 section {
