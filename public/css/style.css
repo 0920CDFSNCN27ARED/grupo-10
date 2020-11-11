@@ -1,10 +1,10 @@
 body {
     /*background: #ff1616;*/
-    font-family: 'Grandstander';     
+    font-family: "Grandstander";
 }
 
 .title {
-    font-family: 'Grandstander', cursive;
+    font-family: "Grandstander", cursive;
     text-align: center;
 }
 
@@ -12,40 +12,44 @@ header {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    background-color: #ff1616;
-    height: 200px;
 }
 
 .img-logo {
-    width: 30%;
-    height: 100%;
+    width: 50%;
     margin: 0 auto;
 }
 
 .nav-list {
-    background-color: #ffde59;
+    background-color: #0090cc;
     margin: 0 auto;
     width: 100%;
 }
 
 ul {
- width: 100%;
- list-style: none; 
+    width: 100%;
+    list-style: none;
 }
 
 li {
     display: table-cell;
     padding: 0 20px 0 20px;
-    width: 550px;     
+    width: 550px;
+}
+li :hover {
+    color: #ffb3a3;
 }
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 content {
     margin: 0 auto;
     max-width: 900px;
+}
+content :hover {
+    flex-grow: 1;
 }
 
 form {
