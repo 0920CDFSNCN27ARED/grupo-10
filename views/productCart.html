@@ -1,68 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Carrito</title>    
-</head>
-<header>
-    <img
-    class="img-logo"
-    src="/img/Copy of Untitled Design.png"
-    alt="img-logo"
-/>
-<div class="nav-list">
-    <ul class="primary-list">
-        <li class="list"><a href="/"> Home</a></li>
-        <li class="list"><a href="/products"> Producto </a></li>
-        <li class="list"><a href="/cart"> Carrito</a></li>
-        <li class="list"><a href="/Login"> Ingreso</a></li>
-        <li class="list"><a href="/register"> Registrate</a></li>
-    </ul>
-</div>
-</header>
-<body>
-    <content>
-        <h2>Carrito</h2>
-        <form class="username" action="/" method="POST">
-            <p><label for="usuario">Ususario</label></p>
-            <input type="text" id="usuario" name="Ususario" placeholder="Ususario">
-            <p><label for="">Dirección</label></p>
-            <input type="text" id="Dirección" name="Dirección" placeholder="Dirección">    
-        
-        <h2>Mi compra</h2>
-            <section class="Productos">
-                <article>
-                    <h3>Producto 1</h3>
-                    <h3>Producto 2</h3>
-                    <h3>Producto 3</h3>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-                    <h2>Total</h2>
-                </article>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/base.css" />
+
+        <title>Carrito</title>
+    </head>
+    <header>
+        <img
+            class="img-logo"
+            src="/img/Copy of Untitled Design.png"
+            alt="img-logo"
+        />
+        <div class="nav-list">
+            <ul class="primary-list">
+                <li class="list"><a href="/"> Home</a></li>
+                <li class="list"><a href="/products"> Producto </a></li>
+                <li class="list"><a href="/cart"> Carrito</a></li>
+                <li class="list"><a href="/Login"> Ingreso</a></li>
+                <li class="list"><a href="/register"> Registrate</a></li>
+            </ul>
+        </div>
+    </header>
+    <body>
+        <content>
+            <section class="cart">
+                <div class="cart-box">
+                    <h2>Mi compra</h2>
+                    <article>
+                        <p>Producto 1 - Breve descripcíon</p>
+                        <p>Producto 2 - Breve descripcíon</p>
+                        <p>Producto 3 - Breve descripcíon</p>
+
+                        <h2>Total: $$$$</h2>
+                    </article>
+                </div>
+                <div class="cart-box2">
+                    <form class="username" action="/" method="POST">
+                        <p><label for="usuario">Ususario</label></p>
+                        <input
+                            type="text"
+                            id="usuario"
+                            name="Ususario"
+                            placeholder="Ususario"
+                        />
+                        <p><label for="">Dirección</label></p>
+                        <input
+                            type="text"
+                            id="Dirección"
+                            name="Dirección"
+                            placeholder="Dirección"
+                        />
+                    </form>
+                </div>
             </section>
-    </content>
-</body>
-<footer>
-    <div>
-        <h3>Contacto</h3>
-        <ul>
-            <li>Mail</li>
-            <li>Whatsapp</li>
-            <li>Dirección</li>
-        </ul>
-        <h3>Medios de pago</h3>
-        <ul>
-            <li>Tarjetas de crédito y débito</li>
-            <li>Transferencias</li>
-            <li>Pago fácil</li>
-        </ul>
-        <h3>Formas de entrega</h3>
-        <ul>
-            <li>Correo argentino</li>
-            <li>Retiro en sucursales</li>
-        </ul>
-    </div>
-</footer>
+        </content>
+    </body>
+    <footer id="footer">
+        <div class="footer-box">
+            <h3>Contacto</h3>
+            <p>Correo: xxxxxxx@gmail.com</p>
+            <p>Whatsapp: 15-xxxxxxx</p>
+            <p>Dirección: xxxxxxxxxxxxxx</p>
+        </div>
+        <div class="footer-box">
+            <h3>Medios de pago</h3>
+            <p>Tarjetas de crédito y débito</p>
+            <p>Transferencias</p>
+            <p>Pago fácil</p>
+        </div>
+        <div class="footer-box">
+            <h3>Formas de entrega</h3>
+            <p>Correo argentino</p>
+            <p>Retiro en sucursales</p>
+            <p>Entrega a Domicilio</p>
+        </div>
+        <!--Medios de pagos, envios, copyright, contacto, ver iconos para agregar-->
+    </footer>
 </html>

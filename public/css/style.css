@@ -1,6 +1,7 @@
 body {
-    /*background: #ff1616;*/
+    background: rgb(231, 226, 226);
     font-family: "Grandstander";
+    width: 100%;
 }
 
 .title {
@@ -12,6 +13,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
+    background-color: white;
 }
 
 .img-logo {
@@ -45,15 +47,66 @@ a {
 }
 
 content {
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
-    max-width: 900px;
-}
-content :hover {
-    flex-grow: 1;
 }
 
-form {
+/*content :hover {
+    flex-grow: 1;
+} */
+
+.reg-log {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+}
+
+.reg-log-box {
+    background-color: white;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    border: solid;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding: 10px 5px;
+    width: 100%;
+}
+
+.product-content {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.img-descrip {
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    height: 160px;
+    padding: 0 5px;
+    position: relative;
+    left: 20px;
+    top: 60px;
+}
+
+.img-prodruct {
+    width: 40%;
+}
+
+.item-descrip {
+    background-color: white;
+    height: 150px;
+    width: 210px;
+    padding: 0px 5px;
+    border-radius: 10px;
+    position: relative;
+    bottom: 160px;
+    right: 290px;
 }
 
 input {
@@ -73,7 +126,7 @@ section {
 
 article {
     width: 30%;
-    margin-bottom: 30px;
+    margin: 10px 5px 10px 5px;
     padding: 15px;
     border-radius: 10px;
     background: white;
@@ -86,4 +139,51 @@ article img {
 content h2 {
     margin-top: 80px;
     text-align: center;
+}
+
+#footer {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 15px;
+    border-top: double #0090cc 5px;
+}
+
+.footer-box {
+    background-color: white;
+    font-size: 14px;
+    width: 33.3%;
+    display: block;
+    align-self: start;
+    padding-left: 15px;
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.cart-box {
+    box-sizing: border-box;
+    background-color: white;
+    text-align: center;
+    display: block;
+    align-self: center;
+    width: 40%;
+    border-radius: 10px;
+}
+
+.cart-box2 {
+    box-sizing: border-box;
+    background-color: white;
+    text-align: center;
+    width: 30%;
+    border-radius: 10px;
+    position: relative;
+    left: 200px;
+    bottom: 100px;
 }

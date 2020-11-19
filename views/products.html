@@ -8,6 +8,8 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/base.css" />
+
         <title>Litlle BU! Products</title>
     </head>
     <header>
@@ -27,44 +29,60 @@
         </div>
     </header>
     <body>
-        <content>
-            <article>
-                <img src="/img/zapatito-prueba.jpg" alt="img-producto1" />
+        <content class="product-content">
+            <article class="product-item item-descrip2">
+                <img
+                    class="img-product"
+                    src="/img/zapatito-prueba.jpg"
+                    alt="img-producto1"
+                />
+            </article>
+            <div class="img-descrip">
+                <h3>Descripcíon del Producto</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Ducimus, reprehenderit. Fuga culpa itaque dignissimos
                     temporibus optio. Suscipit necessitatibus explicabo
                     voluptas!
                 </p>
-            </article>
-            <div>
+            </div>
+            <div class="product-item item-descrip">
                 <h3>Nombre del producto</h3>
                 <p>Precio: $$$$</p>
                 <form action="/cart" method="GET">
+                    <p>
+                        <label for="">Cantidad</label>
+                        <select name=".">
+                            <option value="cant">1</option>
+                            <option value="cant">2</option>
+                            <option value="cant">3</option>
+                        </select>
+                    </p>
+
                     <button type="submit" name="Comprar">Comprar</button>
                 </form>
             </div>
         </content>
     </body>
-    <footer>
-        <div>
+    <footer id="footer">
+        <div class="footer-box">
             <h3>Contacto</h3>
-            <ul>
-                <li>Mail</li>
-                <li>Whatsapp</li>
-                <li>Dirección</li>
-            </ul>
-            <h3>Medios de pago</h3>
-            <ul>
-                <li>Tarjetas de crédito y débito</li>
-                <li>Transferencias</li>
-                <li>Pago fácil</li>
-            </ul>
-            <h3>Formas de entrega</h3>
-            <ul>
-                <li>Correo argentino</li>
-                <li>Retiro en sucursales</li>
-            </ul>
+            <p>Correo: xxxxxxx@gmail.com</p>
+            <p>Whatsapp: 15-xxxxxxx</p>
+            <p>Dirección: xxxxxxxxxxxxxx</p>
         </div>
+        <div class="footer-box">
+            <h3>Medios de pago</h3>
+            <p>Tarjetas de crédito y débito</p>
+            <p>Transferencias</p>
+            <p>Pago fácil</p>
+        </div>
+        <div class="footer-box">
+            <h3>Formas de entrega</h3>
+            <p>Correo argentino</p>
+            <p>Retiro en sucursales</p>
+            <p>Entrega a Domicilio</p>
+        </div>
+        <!--Medios de pagos, envios, copyright, contacto, ver iconos para agregar-->
     </footer>
 </html>

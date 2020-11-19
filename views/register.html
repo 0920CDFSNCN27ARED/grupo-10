@@ -3,11 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <link
             href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/base.css" />
+
         <title>Register!</title>
     </head>
     <header>
@@ -27,80 +30,88 @@
         </div>
     </header>
     <body>
-        <content>
-            <h2>Crea tu cuenta</h2>
+        <content class="reg-log">
+            <h2 class="reg-log-box">Crea tu cuenta</h2>
             <form action="/" method="POST">
-                <p><label for="name">Nombre Completo:</label></p>
-                <input
-                    type="text"
-                    id="name"
-                    name="full-name"
-                    placeholder="Ingrese nombre completo"
-                />
+                <div class="reg-log-box">
+                    <p><label for="name">Nombre Completo:</label></p>
+                    <input
+                        type="text"
+                        id="name"
+                        name="full-name"
+                        placeholder="Ingrese nombre completo"
+                    />
 
-                <p><label for="last-name">Apellido:</label></p>
-                <input
-                    type="text"
-                    id="last-name"
-                    name="last-name"
-                    placeholder="Ingrese apellido"
-                />
+                    <p><label for="last-name">Apellido:</label></p>
+                    <input
+                        type="text"
+                        id="last-name"
+                        name="last-name"
+                        placeholder="Ingrese apellido"
+                    />
 
-                <p><label for="date">Fecha de nacimiento</label></p>
-                <input type="date" id="date" name="date" />
+                    <p><label for="date">Fecha de nacimiento</label></p>
+                    <input type="date" id="date" name="date" />
 
-                <p><label for="username">Nombre de Usuario:</label></p>
-                <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="Ingrese nombre de usuario"
-                />
+                    <p><label for="username">Nombre de Usuario:</label></p>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Ingrese nombre de usuario"
+                    />
 
-                <p><label for="email">E-mail</label></p>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Ingresa tu e-mail"
-                />
+                    <p><label for="email">E-mail</label></p>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Ingresa tu e-mail"
+                    />
 
-                <p><label for="password">Crea tu Contraseña</label></p>
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Ingresa nueva contraseña"
-                />
+                    <p><label for="password">Crea tu Contraseña</label></p>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Ingresa nueva contraseña"
+                    />
+                </div>
 
-                <span
-                    ><p><label for="">Sexo:</label></p></span
-                >
-                <span><input type="radio" name="sex" /> Masculino</span>
-                <span><input type="radio" name="sex" /> Femenino</span>
-                <span><input type="radio" name="sex" /> Otros</span>
+                <div class="reg-log-box">
+                    <span
+                        ><p><label for="">Sexo:</label></p></span
+                    >
+                    <span><input type="radio" name="sex" /> Masculino</span>
+                    <span><input type="radio" name="sex" /> Femenino</span>
+                    <span><input type="radio" name="sex" /> Otros</span>
 
-                <p>
-                    <button type="submit">Registrar</button>
-                    <button type="reset">Limpiar</button>
-                </p>
+                    <p>
+                        <button type="submit">Registrar</button>
+                        <button type="reset">Limpiar</button>
+                    </p>
+                </div>
             </form>
         </content>
     </body>
-    <footer>
-        <div>
+    <footer id="footer">
+        <div class="footer-box">
             <h3>Contacto</h3>
             <ul>
                 <li>Mail</li>
                 <li>Whatsapp</li>
                 <li>Dirección</li>
             </ul>
+        </div>
+        <div class="footer-box">
             <h3>Medios de pago</h3>
             <ul>
                 <li>Tarjetas de crédito y débito</li>
                 <li>Transferencias</li>
                 <li>Pago fácil</li>
             </ul>
+        </div>
+        <div class="footer-box">
             <h3>Formas de entrega</h3>
             <ul>
                 <li>Correo argentino</li>
