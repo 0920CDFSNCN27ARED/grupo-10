@@ -2,6 +2,7 @@ body {
     background: rgb(231, 226, 226);
     font-family: "Grandstander";
     width: 100%;
+    box-sizing: border-box;
 }
 
 .title {
@@ -31,11 +32,11 @@ ul {
     width: 100%;
     list-style: none;
 }
-
+/* modificar li o ul en su defecto para lograr centrar*/
 li {
     display: table-cell;
     padding: 0 20px 0 20px;
-    width: 550px;
+    width: 22%;
 }
 li :hover {
     color: #ffb3a3;
@@ -136,7 +137,7 @@ article img {
     width: 100%;
 }
 
-content h2 {
+main h2 {
     margin-top: 80px;
     text-align: center;
 }
