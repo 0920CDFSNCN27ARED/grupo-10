@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head', {title: "Nuestros Productos"}) %>
+    </head>
+    <body>
+        <%- include('../partials/header') %> <% for( let i = 0; i < 20; i++ ) {
+        %> <%- include('../partials/article') %> <% } %> <%-
+        include('../partials/footer') %>
+    </body>
+</html>

@@ -2,34 +2,30 @@ const express = require("express");
 const app = express();
 
 app.set("view engine", "ejs");
-app.set("view", __dirname + "views");
+app.set("views", __dirname + "/views");
 
 app.use(express.static("public"));
+
+const productRouter = require("./routes/product-router");
 
 app.listen(3000, () => {
     console.log("Servidor funcionando en puerto 3000");
 });
 
-app.all("/", (req, res) => {
-    res.sendFile(__dirname + "/views/index.html");
+app.get("/", (req, res) => {
+    res.render("index");
 });
 
-app.get("/products", (req, res) => {
-    res.sendFile(__dirname + "/views/products.html");
-});
+app.use("/products", productRouter);
 
 app.get("/cart", (req, res) => {
-    res.sendFile(__dirname + "/views/productCart.html");
+    res.render("productCart");
 });
 
 app.get("/register", (req, res) => {
-    res.sendFile(__dirname + "/views/register.html");
+    res.render("register");
 });
 
 app.get("/login", (req, res) => {
-    res.sendFile(__dirname + "/views/login.html");
-});
-
-app.get("/pre", (req, res) => {
-    res.sendFile(__dirname + "/views/pre-home.html");
+    res.render("login");
 });
