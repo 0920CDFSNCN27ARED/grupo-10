@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "Zapatito Niño",
+        "description": " ",
+        "price": " ",
+        "discount": " ",
+        "image": " ",
+        "category": " "
+    },
+    {
+        "id": 2,
+        "name": "Zapatito Niño",
+        "description": " ",
+        "price": " ",
+        "discount": " ",
+        "image": " ",
+        "category": " "
+    },
+    {
+        "id": 3,
+        "name": "Zapatito Niño",
+        "description": " ",
+        "price": " ",
+        "discount": " ",
+        "image": " ",
+        "category": " "
+    },
+    {
+        "id": 4,
+        "name": "Zapatito Niño",
+        "description": " ",
+        "price": " ",
+        "discount": " ",
+        "image": " ",
+        "category": " "
+    },
+    {
+        "id": 5,
+        "name": "Zapatito Niño",
+        "description": " ",
+        "price": " ",
+        "discount": " ",
+        "image": " ",
+        "category": " "
+    }
+]

@@ -1,3 +1,6 @@
+//requiere getPrducts.
+const getProducts = require("../utils/getProducts");
+
 module.exports = {
     getList: (req, res) => {
         res.render("product/list");
