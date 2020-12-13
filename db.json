@@ -1,47 +1,74 @@
 [
     {
         "id": 1,
-        "name": "Zapatito Niño",
-        "description": " ",
-        "price": " ",
-        "discount": " ",
-        "image": " ",
-        "category": " "
+        "name": "Zapatillas NB sport",
+        "description": "Maximo comodidad para tus pies",
+        "price": 5790,
+        "discount": 20,
+        "image": "img-zapatillas-nb-blanconegro.jpg",
+        "category": "in-sale"
     },
     {
         "id": 2,
-        "name": "Zapatito Niño",
-        "description": " ",
-        "price": " ",
-        "discount": " ",
-        "image": " ",
-        "category": " "
+        "name": "Nauticos Casuales",
+        "description": "Para una ocasión especial",
+        "price": 4299,
+        "discount": 40,
+        "image": "img-nauticos-azul.jpg",
+        "category": "in-sale"
     },
     {
         "id": 3,
-        "name": "Zapatito Niño",
-        "description": " ",
-        "price": " ",
-        "discount": " ",
-        "image": " ",
-        "category": " "
+        "name": "Zapatillas Converse Shiny",
+        "description": "Siempre te acompañan para cualquier ocasión",
+        "price": 4190,
+        "discount": 0,
+        "image": "img-zapatillas-converse-lila.jpg",
+        "category": "visited"
     },
     {
         "id": 4,
-        "name": "Zapatito Niño",
-        "description": " ",
-        "price": " ",
-        "discount": " ",
-        "image": " ",
-        "category": " "
+        "name": "Zapatillas UA Running Celeste",
+        "description": "Cuando hagas deportes no hay mejor opción",
+        "price": 6890,
+        "discount": 12,
+        "image": "img-zapatillas-ua-celeste.jpg",
+        "category": "in-sale"
     },
     {
         "id": 5,
-        "name": "Zapatito Niño",
-        "description": " ",
-        "price": " ",
-        "discount": " ",
-        "image": " ",
-        "category": " "
+        "name": "Zapatillas UA Electrico",
+        "description": "Porque a ellos les gustan",
+        "price": 7280,
+        "discount": 30,
+        "image": "img-zapatillas-ua-electrico.jpg",
+        "category": "visited"
+    },
+    {
+        "id": 6,
+        "name": "Zapatillas UA Flex Negras",
+        "description": "Para que corran tanto como a ellos les plazca",
+        "price": 5880,
+        "discount": 0,
+        "image": "img-zapatillas-ua-negro.jpg",
+        "category": "visited"
+    },
+    {
+        "id": 7,
+        "name": "Zapatillas UA Running Menta",
+        "description": "Super comodos al momento de trotar",
+        "price": 11290,
+        "discount": 5,
+        "image": "img-zapatillas-ua-negromenta.jpg",
+        "category": "in-sale"
+    },
+    {
+        "id": 8,
+        "name": "Zapatillas UA Running BlackRose",
+        "description": "Mantente en movimento con su nueva plataforma",
+        "price": 12990,
+        "discount": 10,
+        "image": "img-zapatillas-ua-negrorosa.jpg",
+        "category": "in-sale"
     }
 ]
