@@ -18,8 +18,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/products", productRouter);
-app.use("/register", usersRouter);
-app.use("/login", usersRouter);
+app.use("/users", usersRouter);
 
 app.get("/cart", (req, res) => {
     res.render("productCart");
