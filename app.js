@@ -7,6 +7,7 @@ app.set("views", __dirname + "/views");
 app.use(express.static("public"));
 
 const productRouter = require("./routes/product-router");
+const usersRouter = require("./routes/users-router");
 
 app.listen(3000, () => {
     console.log("Servidor funcionando en puerto 3000");
@@ -17,15 +18,9 @@ app.get("/", (req, res) => {
 });
 
 app.use("/products", productRouter);
+app.use("/register", usersRouter);
+app.use("/login", usersRouter);
 
 app.get("/cart", (req, res) => {
     res.render("productCart");
-});
-
-app.get("/register", (req, res) => {
-    res.render("register");
-});
-
-app.get("/login", (req, res) => {
-    res.render("login");
 });

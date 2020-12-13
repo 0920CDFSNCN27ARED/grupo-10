@@ -4,8 +4,11 @@
         <%- include('../partials/head', {title: "Nuestros Productos"}) %>
     </head>
     <body>
-        <%- include('../partials/header') %> <% for( let i = 0; i < 20; i++ ) {
-        %> <%- include('../partials/article') %> <% } %> <%-
-        include('../partials/footer') %>
+        <%- include('../partials/header') %>
+        <div class="product-content">
+            <% for( let i = 0; i < 18; i++ ) { %> <%-
+            include('../partials/article') %> <% } %>
+        </div>
+        <%- include('../partials/footer') %>
     </body>
 </html>
