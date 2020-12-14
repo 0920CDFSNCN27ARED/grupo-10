@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <%- include('../partials/head', {title: "Nuestros Productos"}) %>
+        <%- include('../partials/head', {title: "Productos"}) %>
     </head>
     <body>
         <%- include('../partials/header') %>
-        <div class="product-content">
-            <% for( let i = 0; i < 18; i++ ) { %> <%-
-            include('../partials/article') %> <% } %>
-        </div>
+        <h2>Nuestros productos</h2>
+        <main>
+            <% products.forEach((product,i) => { %> <%- include('product-card',
+            {product: product}) %> <% }) %>
+        </main>
         <%- include('../partials/footer') %>
     </body>
 </html>

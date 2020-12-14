@@ -5,15 +5,30 @@
     </head>
     <body>
         <%- include('../partials/header') %>
-        <h2>Detalle del producto: --------------</h2>
-        <div>
-            <%- include('../partials/article') %>
-            <h1>-------------</h1>
-            <p>
-                Precio: $$$$$<br />
-                12% OFF
-            </p>
-        </div>
+        <main>
+            <h2>Detalle del producto: <%= product.name %></h2>
+            <article>
+                <div>
+                    <img
+                        src="/img/<%= product.img %>"
+                        alt="<%= product.name %>"
+                    />
+                </div>
+                <div>
+                    <h1><%= product.name %></h1>
+                    <p>
+                        <span><%= product.price %></span>/<%= product.discount
+                        %>%OFF
+                    </p>
+                </div>
+                <form action="/product/cart" method="">
+                    <button type="submit">Comprar</button>
+                </form>
+                <form action="/products/<%= product.id %>/edit " method="">
+                    <button type="submit">Editar</button>
+                </form>
+            </article>
+        </main>
 
         <%- include('../partials/footer') %>
     </body>

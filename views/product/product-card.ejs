@@ -1,0 +1,14 @@
+<article>
+    <a href="/products/<%= product.id %>/detail ">
+        <div>
+            <img src="/img/<%= product.image %>" alt="<%= product.name%> " />
+            <div>
+                <p><%= product.price %></p>
+                <% if (product.discount > 0) { %>
+                <p><%= product.discount %></p>
+                <% } %>
+                <h4><%=product.name %></h4>
+            </div>
+        </div>
+    </a>
+</article>

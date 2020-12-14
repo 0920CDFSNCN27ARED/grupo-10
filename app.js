@@ -6,6 +6,9 @@ app.set("views", __dirname + "/views");
 
 app.use(express.static("public"));
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 const productRouter = require("./routes/product-router");
 const usersRouter = require("./routes/users-router");
 

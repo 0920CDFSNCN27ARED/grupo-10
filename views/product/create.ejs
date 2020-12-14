@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head', title{'Crea tu Producto'}) %>
+    </head>
+    <body>
+        <%- include('../partials/header') %>
+        <main>
+            <div>
+                <h2>Formulario de Creación de Producto</h2>
+                <form
+                    action="/products/list"
+                    method="POST"
+                    enctype="multipart/form-data"
+                ></form>
+                <div>
+                    <div>
+                        <label for="name">Nombre de Producto</label>
+                        <input type="text" name="name" id="name" />
+                    </div>
+                    <div>
+                        <label for="description">Descripción</label>
+                        <input
+                            type="textarea"
+                            name="description"
+                            id="description"
+                        />
+                    </div>
+                    <div>
+                        <label for="price">Precio</label>
+                        <input type="number" name="price" id="price" />
+                    </div>
+                    <div>
+                        <label for="discount">Descuento</label>
+                        <input type="number" name="discount" id="discount" />
+                    </div>
+                    <div>
+                        <label for="img">Imagen</label>
+                        <input type="file" name="img" id="img" />
+                    </div>
+                    <div>
+                        <label for="category">Categoria</label>
+                        <input type="select" name="category" id="category" />
+                    </div>
+                    <div>
+                        <button type="submit">Guardar producto</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <%- include('../partials/footer') %>
+    </body>
+</html>
