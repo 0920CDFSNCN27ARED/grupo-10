@@ -3,3 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+.width-99 {
+    width: 99%;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-center {
+    justify-content: center;
+}
+.flex-align-center {
+    align-items: center;
+}
+.hide {
+    display: none;
+
+@media (min-width: 768px) {
+    .width-md-100 {
+        width: 100%;
+    }
+
+    .md-display {
+        display: initial;
+    }
+
+    .col-md-6 {
+        width: 60%;
+    }
+
+    .md-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
