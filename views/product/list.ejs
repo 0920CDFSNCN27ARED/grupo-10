@@ -5,10 +5,14 @@
     </head>
     <body>
         <%- include('../partials/header') %>
-        <h2>Nuestros productos</h2>
-        <main>
-            <% products.forEach((product,i) => { %> <%- include('product-card',
-            {product: product}) %> <% }) %>
+        <main class="container">
+            <section>
+                <h2>Nuestros productos</h2>
+                <div class="product-container">
+                    <% products.forEach((product,i) => { %> <%-
+                    include('product-card', {product: product}) %> <% }) %>
+                </div>
+            </section>
         </main>
         <%- include('../partials/footer') %>
     </body>

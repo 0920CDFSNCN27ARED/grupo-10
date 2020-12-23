@@ -6,16 +6,22 @@
     <body>
         <%- include("partials/header") %>
 
-        <main class="product-index">
-            <h2>Productos destacados</h2>
-            <section class="content-destacados">
-                <% for(let i = 0; i < 3; i++) { %>
-                <%-include("partials/article") %> <% } %>
+        <main class="container padding-10 margin-5">
+            <section>
+                <h2>Productos destacados</h2>
+                <div class="product-container">
+                    <% products.forEach((product, i) =>{%> <%-
+                    include('product/product-card', {product: product})%> <% })
+                    %>
+                </div>
             </section>
-            <h2>Ofertas</h2>
-            <section class="content-ofertas">
-                <% for(let i = 0; i < 3; i++) { %>
-                <%-include("partials/article") %> <% } %>
+            <section>
+                <h2>Ofertas</h2>
+                <div class="product-container">
+                    <% products.forEach((product, i) =>{%> <%-
+                    include('product/product-card', {product: product})%> <% })
+                    %>
+                </div>
             </section>
         </main>
         <%- include("partials/footer") %>

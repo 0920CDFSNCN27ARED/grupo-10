@@ -7,7 +7,7 @@ module.exports = {
     getList: (req, res) => {
         const products = getProducts();
 
-        res.render("products/list", {
+        res.render("product/list", {
             products,
             toThousand,
         });
