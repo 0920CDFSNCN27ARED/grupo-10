@@ -28,3 +28,7 @@ app.use("/users", usersRouter);
 app.get("/cart", (req, res) => {
     res.render("productCart");
 });
+
+const session = require("express-session");
+
+app.use(session({ secret: "nuestro mensaje secreto" }));

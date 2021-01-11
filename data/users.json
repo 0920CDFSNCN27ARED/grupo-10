@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "first_name": "Gerik",
+        "last_name": "Voysey",
+        "email": "gvoysey0@ning.com",
+        "password": "ozGZq1KsA0",
+        "category": "user",
+        "image": "user_1.jpg"
+    },
+    {
+        "id": 2,
+        "first_name": "Kile",
+        "last_name": "Yewdall",
+        "email": "kyewdall1@bloomberg.com",
+        "password": "965qTyyI",
+        "category": "user",
+        "image": "user_2.jpg"
+    },
+    {
+        "id": 3,
+        "first_name": "Burnard",
+        "last_name": "Dobbings",
+        "email": "bdobbings2@boston.com",
+        "password": "0rPMzscf9j1",
+        "category": "user",
+        "image": "user_3.jpg"
+    },
+    {
+        "id": 4,
+        "first_name": "Etan",
+        "last_name": "Gandley",
+        "email": "egandley3@fda.gov",
+        "password": "I3dTd2k6W",
+        "category": "user",
+        "image": "user_4.jpg"
+    },
+    {
+        "id": 5,
+        "first_name": "Arman",
+        "last_name": "Grundon",
+        "email": "agrundon4@opensource.org",
+        "password": "LRCAicg7J",
+        "category": "user",
+        "image": "user_5.jpg"
+    },
+    {
+        "id": 6,
+        "first_name": "Hort",
+        "last_name": "Vittel",
+        "email": "hvittel5@wikimedia.org",
+        "password": "16xUiVt4P0f",
+        "category": "user",
+        "image": "user_6.jpg"
+    },
+    {
+        "id": 7,
+        "first_name": "Loretta",
+        "last_name": "Filippucci",
+        "email": "lfilippucci6@weebly.com",
+        "password": "7ufvm1o8K",
+        "category": "user",
+        "image": "user_7.jpg"
+    },
+    {
+        "id": 8,
+        "first_name": "Barth",
+        "last_name": "Hacquel",
+        "email": "bhacquel7@constantcontact.com",
+        "password": "KyUf9EnqZuG",
+        "category": "user",
+        "image": "user_8.jpg"
+    }
+]
