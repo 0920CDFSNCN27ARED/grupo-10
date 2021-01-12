@@ -44,6 +44,7 @@ module.exports = {
             discount: Number(req.body.discount),
             image: req.body.img,
             category: req.body.category,
+            size: req.body.size,
         };
 
         products.push(newProduct);
@@ -89,3 +90,18 @@ module.exports = {
         res.redirect("/products/list");
     },
 };
+
+/* create: (req, res) => {
+    const products = getProducts();
+    const indiceUltimoProducto = products.length - 1;
+    const elUltimoProducto = products[indiceUltimoProducto];
+    const newId = elUltimoProducto.id + 1;
+
+    const product = {
+        id: newId,
+        name: req.body.name,
+        description: req.body.description,
+        category: req.body.category,
+        price: req.body.price,
+        discount: req.body.discount,
+        ima */

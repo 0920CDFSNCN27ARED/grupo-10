@@ -6,7 +6,8 @@
         "price": 5790,
         "discount": 20,
         "image": "img-zapatillas-nb-blanconegro.jpg",
-        "category": "in-sale"
+        "category": "in-sale",
+        "size": 25
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "price": 4299,
         "discount": 40,
         "image": "img-nauticos-azul.jpg",
-        "category": "in-sale"
+        "category": "in-sale",
+        "size": 26
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@
         "price": 4190,
         "discount": 0,
         "image": "img-zapatillas-converse-lila.jpg",
-        "category": "visited"
+        "category": "visited",
+        "size": 26
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@
         "price": 6890,
         "discount": 12,
         "image": "img-zapatillas-ua-celeste.jpg",
-        "category": "in-sale"
+        "category": "in-sale",
+        "size": 27
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@
         "price": 7280,
         "discount": 30,
         "image": "img-zapatillas-ua-electrico.jpg",
-        "category": "visited"
+        "category": "visited",
+        "size": 27
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@
         "price": 5880,
         "discount": 0,
         "image": "img-zapatillas-ua-negro.jpg",
-        "category": "visited"
+        "category": "visited",
+        "size": 25
     },
     {
         "id": 7,
@@ -60,7 +66,8 @@
         "price": 11290,
         "discount": 5,
         "image": "img-zapatillas-ua-negromenta.jpg",
-        "category": "in-sale"
+        "category": "in-sale",
+        "size": 26
     },
     {
         "id": 8,
@@ -69,6 +76,7 @@
         "price": 12990,
         "discount": 10,
         "image": "img-zapatillas-ua-negrorosa.jpg",
-        "category": "in-sale"
+        "category": "in-sale",
+        "size": 25
     }
 ]
