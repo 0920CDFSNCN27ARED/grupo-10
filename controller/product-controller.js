@@ -78,7 +78,7 @@ module.exports = {
 
         const filename = req.file ? req.file.filename : requiredProduct.image;
 
-        const requiredProduct = {
+        const requiredProducts = {
             name: req.body.name,
             description: req.body.description,
             price: Number(req.body.price),

@@ -3,7 +3,7 @@ const path = require("path");
 
 function getUser() {
     const usersJson = fs.readFileSync(
-        path.resolve(__dirname, "../users.json"),
+        path.resolve(__dirname, "../data/users.json"),
         {
             encoding: "utf-8",
         }
@@ -11,5 +11,5 @@ function getUser() {
     return JSON.parse(usersJson);
 }
 
-//exporta db usuarios.
+//exporta base datos de usuarios.
 module.exports = getUser;
