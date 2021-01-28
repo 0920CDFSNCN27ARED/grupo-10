@@ -6,16 +6,29 @@ app.set("views", __dirname + "/views");
 
 app.use(express.static("public"));
 
+// MAKES WORK OUT, PUT AND DELETE
+
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
+
+// FORM PROCESSING
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+// ROUTES REQUIRE
 
 const productRouter = require("./routes/product-router");
 const usersRouter = require("./routes/users-router");
 const getProducts = require("./utils/getProducts");
 
+// PORT
+
 app.listen(3000, () => {
     console.log("Servidor funcionando en puerto 3000");
 });
+
+// ROUTES
 
 app.get("/", (req, res) => {
     const products = getProducts();
@@ -23,6 +36,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/products", productRouter);
+
 app.use("/users", usersRouter);
 
 app.get("/cart", (req, res) => {

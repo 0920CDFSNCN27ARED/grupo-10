@@ -7,7 +7,7 @@ module.exports = {
     getList: (req, res) => {
         const products = getProducts();
 
-        res.render("product/list", {
+        res.render("products/list", {
             products,
             toThousand,
         });
@@ -15,18 +15,18 @@ module.exports = {
 
     getOne: (req, res) => {
         const products = getProducts();
+        const requiredProduct = products.find((prod) => {
+            return prod.id == req.params.id;
+        });
 
-        if (req.params.id == null) {
+        if (requiredProduct == null) {
             return res.status(404).send("404 NOT FOUND.!");
         }
 
-        products.forEach((prod, i) => {
-            if (prod[i].id == req.params.id) {
-                return prod[i];
-            }
+        res.render("products/detail", {
+            product: requiredProduct,
+            toThousand,
         });
-
-        return res.render("products/:id/detail");
     },
 
     showCreate: (req, res) => {
@@ -50,7 +50,10 @@ module.exports = {
         products.push(newProduct);
 
         const productsJSON = JSON.stringify(products);
-        fs.writeFileSync(path.resolve(__dirname, "../db.json"), productsJSON);
+        fs.writeFileSync(
+            path.resolve(__dirname, "../data/products.json"),
+            productsJSON
+        );
 
         res.redirect("products/list");
     },
@@ -67,25 +70,29 @@ module.exports = {
     },
 
     edit: (req, res) => {
-        const products = getProducts;
-        for (let i = 0; i < products.length; i++) {
-            if (products[i].id == req.params.id) {
-                products[i] = editedProduct;
-            }
-        }
+        const products = getProducts();
 
-        const editedProduct = {
+        const requiredProduct = products.find((prod) => {
+            return prod.id == req.params.id;
+        });
+
+        const filename = req.file ? req.file.filename : requiredProduct.image;
+
+        const requiredProduct = {
             name: req.body.name,
             description: req.body.description,
             price: Number(req.body.price),
             discount: Number(req.body.discount),
-            image: req.body.file,
+            image: filename,
+            size: req.body.size,
+            category: req.body.category,
         };
 
-        products.push(editedProduct);
-
-        const editedJSON = JSON.stringify(editedProduct);
-        fs.writeFileSync(path.resolve(__dirname + "../db.json"), editedJSON);
+        const editedProduct = JSON.stringify(requiredProduct, null, 2);
+        fs.writeFileSync(
+            path.resolve(__dirname + "../data/products.json"),
+            editedProduct
+        );
 
         res.redirect("/products/list");
     },

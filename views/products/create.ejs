@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <%- include('../partials/head', title{'Crea tu Producto'}) %>
+        <%- include('../partials/head', {title: 'Crea tu Producto'}) %>
     </head>
     <body>
         <%- include('../partials/header') %>
@@ -12,7 +12,7 @@
                     action="/products/list"
                     method="POST"
                     enctype="multipart/form-data"
-                ></form>
+                >
                 <div>
                     <div>
                         <label for="name">Nombre de Producto</label>
@@ -49,6 +49,7 @@
                     <div>
                         <button type="submit">Crear producto</button>
                     </div>
+                </form>
                 </div>
             </div>
         </main>
