@@ -13,6 +13,10 @@ module.exports = {
         });
 
         if (!user) return res.redirect("users/login");
+
+        req.session.loggedUserId = user.id;
+
+        return res.redirect("list");
     },
 
     register: (req, res) => {
@@ -27,8 +31,7 @@ module.exports = {
         const newUser = {
             id: newId,
             ...req.body,
-            /* password: bcrypt.hashSync(req.body.password, 12),
-            avatar: req.file.filename, */
+            password: bcrypt.hashSync(req.body.password, 12),
         };
 
         users.push(newUser);

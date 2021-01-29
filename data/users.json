@@ -80,5 +80,15 @@
     "email": "cesarlcasanegra@gmail.com",
     "password": "12345678",
     "sex": "on"
+  },
+  {
+    "id": 10,
+    "full-name": "Cesar",
+    "last-name": "Lopez",
+    "date": "1987-10-08",
+    "username": "ceslop",
+    "email": "cesarlcasanegra@gmail.com",
+    "password": "$2b$12$u6.ucDlwL50JOcs9GgulWe2W4ZtpD6XY/Zt6p5A6Y9IlVbXnxxUwG",
+    "sex": "on"
   }
 ]
