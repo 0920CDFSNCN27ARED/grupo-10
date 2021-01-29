@@ -1,7 +1,7 @@
 //requiere getProducts.
 const getProducts = require("../utils/getProducts");
 const toThousand = require("../utils/to-thousand");
-const path = require("path");
+const saveProducts = require("../utils/save-products");
 
 module.exports = {
     getList: (req, res) => {
@@ -47,11 +47,7 @@ module.exports = {
             size: req.body.size,
         };
 
-        const createdProduct = JSON.stringify(products);
-        fs.writeFileSync(
-            path.resolve(__dirname, "../data/products.json"),
-            createdProduct
-        );
+        saveProducts(products);
 
         res.redirect("products/list");
     },
@@ -86,31 +82,23 @@ module.exports = {
             category: req.body.category,
         };
 
-        const editedProduct = JSON.stringify(products, null, 2);
-        fs.writeFileSync(
-            path.resolve(__dirname + "../data/products.json"),
-            editedProduct
-        );
+        saveProducts(products);
 
         res.redirect("/products/list");
     },
 
-    remove: (req, res) => {
+    delete: (req, res) => {
         const products = getProducts();
 
         const productToDelete = products.find((prod) => {
             return prod.id == req.params.id;
         });
 
-        products.splice(productToDelete);
+        products.splice(productToDelete, 1);
 
-        const productDeleted = JSON.stringify(products, null, 2);
-        fs.writeFileSync(
-            path.resolve(__dirname + "../data/products.json"),
-            productDeleted
-        );
+        saveProducts(products);
 
-        res.redirect("/products/list");
+        res.redirect("/products");
     },
 };
 

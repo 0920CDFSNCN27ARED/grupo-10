@@ -80,5 +80,15 @@
     "email": "cesarlcasanegra@gmail.com",
     "password": "12345678",
     "sex": "on"
+  },
+  {
+    "id": 10,
+    "full-name": "Daniel",
+    "last-name": "Reyes",
+    "date": "1995-07-07",
+    "username": "daniel",
+    "email": "dhro7rm@gmail.com",
+    "password": "$2b$12$bCEP2qLfN2nP5y0WtrWjouEuptYp5JLib2o.Gt2cR0DWDlVAwiQNa",
+    "sex": "on"
   }
 ]
