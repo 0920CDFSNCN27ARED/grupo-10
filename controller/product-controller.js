@@ -1,7 +1,7 @@
 //requiere getProducts.
 const getProducts = require("../utils/getProducts");
 const toThousand = require("../utils/to-thousand");
-const path = require("path");
+const saveProducts = require("../utils/save-products");
 
 module.exports = {
     getList: (req, res) => {
@@ -42,43 +42,37 @@ module.exports = {
             description: req.body.description,
             price: Number(req.body.price),
             discount: Number(req.body.discount),
-            image: req.body.img,
+            image: req.body.image,
             category: req.body.category,
             size: req.body.size,
         };
 
-        products.push(newProduct);
-
-        const productsJSON = JSON.stringify(products);
-        fs.writeFileSync(
-            path.resolve(__dirname, "../data/products.json"),
-            productsJSON
-        );
+        saveProducts(products);
 
         res.redirect("products/list");
     },
 
     showEdit: (req, res) => {
         const products = getProducts();
-        const requiredProduct = products.find((prod) => {
+        const requiredProductToEdit = products.find((prod) => {
             return prod.id == req.params.id;
         });
-        if (requiredProduct == null) {
+        if (requiredProductToEdit == null) {
             return res.status(404).send("404 NOT FOUND!");
         }
-        res.render("products/edit", { product: requiredProduct });
+        res.render("products/edit", { product: requiredProductToEdit });
     },
 
     edit: (req, res) => {
         const products = getProducts();
 
-        const requiredProduct = products.find((prod) => {
+        const productToEdit = products.find((prod) => {
             return prod.id == req.params.id;
         });
 
-        const filename = req.file ? req.file.filename : requiredProduct.image;
+        const filename = req.file ? req.file.filename : productToEdit.image;
 
-        const requiredProducts = {
+        productToEdit = {
             name: req.body.name,
             description: req.body.description,
             price: Number(req.body.price),
@@ -88,13 +82,23 @@ module.exports = {
             category: req.body.category,
         };
 
-        const editedProduct = JSON.stringify(requiredProduct, null, 2);
-        fs.writeFileSync(
-            path.resolve(__dirname + "../data/products.json"),
-            editedProduct
-        );
+        saveProducts(products);
 
         res.redirect("/products/list");
+    },
+
+    delete: (req, res) => {
+        const products = getProducts();
+
+        const productToDelete = products.find((prod) => {
+            return prod.id == req.params.id;
+        });
+
+        products.splice(productToDelete, 1);
+
+        saveProducts(products);
+
+        res.redirect("/products");
     },
 };
 

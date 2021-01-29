@@ -83,12 +83,21 @@
   },
   {
     "id": 10,
+<<<<<<< HEAD
     "full-name": "Cesar",
     "last-name": "Lopez",
     "date": "1987-10-08",
     "username": "ceslop",
     "email": "cesarlcasanegra@gmail.com",
     "password": "$2b$12$u6.ucDlwL50JOcs9GgulWe2W4ZtpD6XY/Zt6p5A6Y9IlVbXnxxUwG",
+=======
+    "full-name": "Daniel",
+    "last-name": "Reyes",
+    "date": "1995-07-07",
+    "username": "daniel",
+    "email": "dhro7rm@gmail.com",
+    "password": "$2b$12$bCEP2qLfN2nP5y0WtrWjouEuptYp5JLib2o.Gt2cR0DWDlVAwiQNa",
+>>>>>>> d59e32b543818966e67bc0909f4437d50589fb5d
     "sex": "on"
   }
 ]

@@ -6,17 +6,15 @@ module.exports = {
     login: (req, res) => {
         const users = getUsers();
         const user = users.find((users) => {
-            return (
-                user.users === req.body.user &&
-                bcrypt.compareSync(req.body.password, user.password)
-            );
+            users.user === req.body.user &&
+                bcrypt.compareSync(req.body.password, user.password);
         });
 
-        if (!user) return res.redirect("users/login");
+        if (!user) {
+            return res.redirect("users/login");
+        }
 
-        req.session.loggedUserId = user.id;
-
-        return res.redirect("list");
+        return res.redirect("index");
     },
 
     register: (req, res) => {
