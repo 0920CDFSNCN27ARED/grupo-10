@@ -78,5 +78,15 @@
         "image": "img-zapatillas-ua-negrorosa.jpg",
         "category": "in-sale",
         "size": 25
+    },
+    {
+        "id": 9,
+        "name": "Zapatillas UA Running BlackRose",
+        "description": "Mantente en movimento con su nueva plataforma",
+        "price": 12990,
+        "discount": 10,
+        "image": "img-zapatillas-ua-negrorosa.jpg",
+        "category": "in-sale",
+        "size": 25
     }
 ]
