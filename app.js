@@ -21,6 +21,7 @@ app.use(express.json());
 const productRouter = require("./routes/product-router");
 const usersRouter = require("./routes/users-router");
 const getProducts = require("./utils/getProducts");
+const getUsers = require("./utils/get-users");
 
 // PORT
 

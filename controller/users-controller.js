@@ -1,19 +1,47 @@
-const users = require("../utils/users");
+const getUsers = require("../utils/get-users");
+const saveUsers = require("../utils/save-users");
+const bcrypt = require("bcrypt");
 
 module.exports = {
-    register: (req, res) => {
-        res.render("users/register");
+    login: (req, res) => {
+        const users = getUsers();
+        const user = users.find((users) => {
+            return (
+                user.users === req.body.user &&
+                bcrypt.compareSync(req.body.password, user.password)
+            );
+        });
+
+        if (!user) return res.redirect("users/login");
     },
 
-    login: (req, res) => {
+    register: (req, res) => {
+        const users = getUsers();
+
+        const lastUserIndex = users.length - 1;
+        const lastUser = users[lastUserIndex];
+        const newId = lastUser ? lastUser.id + 1 : 1;
+
+        delete req.body.password_confirm;
+
+        const newUser = {
+            id: newId,
+            ...req.body,
+            /* password: bcrypt.hashSync(req.body.password, 12),
+            avatar: req.file.filename, */
+        };
+
+        users.push(newUser);
+        saveUsers(users);
+
+        res.redirect("login");
+    },
+
+    showLogin: (req, res) => {
         res.render("users/login");
     },
 
     showCreate: (req, res) => {
-        res.render("/users/create");
-    },
-
-    create: (req, res) => {
-        res.redirect("index");
+        res.render("users/register");
     },
 };
