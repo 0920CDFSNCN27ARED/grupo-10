@@ -6,10 +6,10 @@
     <body>
         <%- include("partials/header") %>
 
-        <main class="container padding-10 margin-5">
+        <main class="width-90">
             <section>
                 <h2>Productos destacados</h2>
-                <div class="product-container">
+                <div class="flex margin-5 md-flex lg-flex">
                     <% products.forEach((product, i) => { %> <%-
                     include('products/product-card', {product: product})%> <% })
                     %>
@@ -17,7 +17,7 @@
             </section>
             <section>
                 <h2>Ofertas</h2>
-                <div class="product-container">
+                <div class="flex margin-5 md-flex lg-flex">
                     <% products.forEach((product, i) => { %> <%-
                     include('products/product-card', {product: product})%> <% })
                     %>

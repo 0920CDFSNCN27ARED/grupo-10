@@ -9,7 +9,7 @@
             <div>
                 <h2>Formulario de Creación de Producto</h2>
                 <form
-                    action="/products/list"
+                    action="/products/new"
                     method="POST"
                     enctype="multipart/form-data"
                 >
@@ -28,23 +28,40 @@
                     </div>
                     <div>
                         <label for="price">Precio</label>
-                        <input type="number" name="price" id="price" />
+                        <input type="text" name="price" id="price" />
                     </div>
                     <div>
                         <label for="discount">Descuento</label>
-                        <input type="number" name="discount" id="discount" />
+                        <input type="text" name="discount" id="discount" />
                     </div>
                     <div>
                         <label for="image">Imagen</label>
-                        <input type="file" name="img" id="image" />
+                        <input type="file" name="image" id="image" />
                     </div>
                     <div>
-                        <label for="category">Categoria</label>
-                        <input type="select" name="category" id="category" />
+                        <label for="category">Categoría</label>
+                        <select name="category" id="category">
+                            <option value="offer">Oferta</option>
+                            <option value="out-sale">Sin stock</option>
+                        </select>
                     </div>
                     <div>
                         <label for="size">Talle</label>
-                        <input type="select" name="size" id="size" />
+                        <label for="size">
+                            <input type="checkbox" value="N" />18
+                        </label>
+                        <label for="size">
+                            <input type="checkbox" value="N" />19
+                        </label>
+                        <label for="size">
+                            <input type="checkbox" value="N" />20
+                        </label>
+                        <label for="size">
+                            <input type="checkbox" value="N" />21
+                        </label>
+                        <label for="size">
+                            <input type="checkbox" value="N" />22
+                        </label>
                     </div>
                     <div>
                         <button type="submit">Crear producto</button>

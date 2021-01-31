@@ -17,25 +17,28 @@
                 <div>
                     <h1><%= product.name %></h1>
                     <p>
-                        <span><%= product.price %></span> / <%= product.discount
-                        %>%OFF
+                        <span>$ <%= toThousand(product.price) %></span> / <%=
+                        product.discount %>% OFF
+                    </p>
+                    <p>
+                        $ <%= toThousand(product.price -
+                        (product.price*(product.discount/100))) %>
                     </p>
                 </div>
-                <form action="/product/cart" method="GET">
+                <a href="/products/cart">
                     <button type="submit">Comprar</button>
-                </form>
-                <form action="/products/<%= product.id %>/edit " method="GET">
-                    <button type="submit">Editar</button>
-                </form>
+                </a>
+                <a href="/products/<%= product.id %>/detail"
+                    ><button type="submit">Editar</button></a
+                >
                 <form
-                    action="/products/<%= product.id %>/delete?_method=DELETE"
+                    action="/products/<%= product.id %>?_method=DELETE"
                     method="POST"
                 >
                     <button type="submit">Borrar producto</button>
                 </form>
             </article>
         </main>
-
         <%- include('../partials/footer') %>
     </body>
 </html>

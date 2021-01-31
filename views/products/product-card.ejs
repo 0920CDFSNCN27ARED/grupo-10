@@ -1,11 +1,18 @@
-<article class="margin-5 padding-10">
+<article>
     <a href="/products/<%= product.id %>/detail">
-        <div class="background-light">
-            <img src="/img/<%= product.image %>" alt="<%= product.name%> " />
+        <div class="width-100">
+            <img
+                class="width-100"
+                src="/img/<%= product.image %>"
+                alt="<%= product.name%> "
+            />
             <div>
-                <p><%= product.price %></p>
+                <p>
+                    $ <%= toThousand(product.price -
+                    (product.price*(product.discount/100))) %>
+                </p>
                 <% if (product.discount > 0) { %>
-                <p><%= product.discount %></p>
+                <p><%= product.discount %> % OFF</p>
                 <% } %>
                 <h4><%=product.name %></h4>
             </div>

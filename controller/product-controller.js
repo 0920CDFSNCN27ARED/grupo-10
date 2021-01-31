@@ -35,21 +35,25 @@ module.exports = {
 
     create: (req, res) => {
         const products = getProducts();
+        const indiceUltimoProducto = products.length - 1;
+        const elUltimoProducto = products[indiceUltimoProducto];
+        const newId = elUltimoProducto.id + 1;
 
         const newProduct = {
-            id: products[products.length].id + 1,
+            id: newId,
             name: req.body.name,
             description: req.body.description,
             price: Number(req.body.price),
             discount: Number(req.body.discount),
-            image: req.body.image,
+            image: req.file.filename,
             category: req.body.category,
             size: req.body.size,
         };
 
+        products.push(newProduct);
         saveProducts(products);
 
-        res.redirect("products/list");
+        res.redirect(`products/${newId}/detail`);
     },
 
     showEdit: (req, res) => {
@@ -90,7 +94,7 @@ module.exports = {
     delete: (req, res) => {
         const products = getProducts();
 
-        const productToDelete = products.find((prod) => {
+        const productToDelete = products.findIndex((prod) => {
             return prod.id == req.params.id;
         });
 
@@ -101,18 +105,3 @@ module.exports = {
         res.redirect("/products");
     },
 };
-
-/* create: (req, res) => {
-    const products = getProducts();
-    const indiceUltimoProducto = products.length - 1;
-    const elUltimoProducto = products[indiceUltimoProducto];
-    const newId = elUltimoProducto.id + 1;
-
-    const product = {
-        id: newId,
-        name: req.body.name,
-        description: req.body.description,
-        category: req.body.category,
-        price: req.body.price,
-        discount: req.body.discount,
-        ima */

@@ -21,7 +21,12 @@ app.use(express.json());
 const productRouter = require("./routes/product-router");
 const usersRouter = require("./routes/users-router");
 const getProducts = require("./utils/getProducts");
+const toThousand = require("./utils/to-thousand");
 const getUsers = require("./utils/get-users");
+
+// VIEWS VARIBLE
+
+app.locals.toThousand = toThousand;
 
 // PORT
 
