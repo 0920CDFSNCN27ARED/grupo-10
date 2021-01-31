@@ -30,7 +30,6 @@ module.exports = {
             id: newId,
             ...req.body,
             password: bcrypt.hashSync(req.body.password, 12),
-            //avatar: req.file.filename,
         };
 
         users.push(newUser);
