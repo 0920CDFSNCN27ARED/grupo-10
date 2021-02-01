@@ -53,7 +53,7 @@ module.exports = {
         products.push(newProduct);
         saveProducts(products);
 
-        res.redirect(`products/${newId}/detail`);
+        res.redirect(`/products/${newId}/detail`);
     },
 
     showEdit: (req, res) => {
@@ -70,25 +70,35 @@ module.exports = {
     edit: (req, res) => {
         const products = getProducts();
 
-        const productToEdit = products.find((prod) => {
+        const productCopy = products.find((prod) => {
             return prod.id == req.params.id;
         });
 
-        const filename = req.file ? req.file.filename : productToEdit.image;
+        console.log("productCopy",productCopy)
 
-        productToEdit = {
-            name: req.body.name,
-            description: req.body.description,
-            price: Number(req.body.price),
-            discount: Number(req.body.discount),
-            image: filename,
-            size: req.body.size,
-            category: req.body.category,
-        };
+        var productToEdit =  productCopy ;
+
+
+        const filename = req.file ? req.file.filename : productToEdit.image;
+        const idEdit = req.params.id;
+
+
+        productToEdit.name = req.body.name,
+        productToEdit.description = req.body.description,
+        productToEdit.price = Number(req.body.price),
+        productToEdit.discount = Number(req.body.discount),
+        productToEdit.image = filename,
+        productToEdit.size = req.body.size,
+        productToEdit.category = req.body.category,
+
+        console.log("productToEdit",productToEdit)
+
+
+        console.log("products",products)
 
         saveProducts(products);
 
-        res.redirect("/products/list");
+        res.redirect(`/products/${idEdit}/detail`);
     },
 
     delete: (req, res) => {

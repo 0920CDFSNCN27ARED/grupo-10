@@ -1,52 +1,41 @@
 [
-    {
-        "id": 7,
-        "name": "Zapatillas UA Running Menta",
-        "description": "Super comodos al momento de trotar",
-        "price": 11290,
-        "discount": 5,
-        "image": "img-zapatillas-ua-negromenta.jpg",
-        "category": "in-sale",
-        "size": 26
-    },
-    {
-        "id": 9,
-        "name": "Zapatillas UA Running BlackRose",
-        "description": "Mantente en movimento con su nueva plataforma",
-        "price": 12990,
-        "discount": 10,
-        "image": "img-zapatillas-ua-negrorosa.jpg",
-        "category": "in-sale",
-        "size": 25
-    },
-    {
-        "id": 10,
-        "name": "Zapatillas UA Electrico",
-        "description": "Porque a ellos les gustan",
-        "price": 7280,
-        "discount": 30,
-        "image": "img-zapatillas-ua-electrico.jpg",
-        "category": "visited",
-        "size": 27
-    },
-    {
-        "id": 11,
-        "name": "Zapatillas UA Electrico",
-        "description": "Porque a ellos les gustan",
-        "price": 7280,
-        "discount": 30,
-        "image": "img-zapatillas-ua-electrico.jpg",
-        "category": "visited",
-        "size": 27
-    },
-    {
-        "id": 12,
-        "name": "Zapatillas UA Running Menta",
-        "description": "Super comodos al momento de trotar",
-        "price": 11290,
-        "discount": 5,
-        "image": "img-zapatillas-ua-negromenta.jpg",
-        "category": "in-sale",
-        "size": 26
-    }
+  {
+    "id": 7,
+    "name": "Zapatillas UA Running Menta",
+    "description": "Super comodos al momento de trotar",
+    "price": 11290,
+    "discount": 5,
+    "image": "img-zapatillas-ua-negromenta.jpg",
+    "category": "in-sale",
+    "size": 26
+  },
+  {
+    "id": 9,
+    "name": "Zapatillas UA Running BlackRose",
+    "description": "Mantente en movimento con su nueva plataforma",
+    "price": 12990,
+    "discount": 10,
+    "image": "img-zapatillas-ua-negrorosa.jpg",
+    "category": "in-sale",
+    "size": 25
+  },
+  {
+    "id": 11,
+    "name": "Zapatillas UA Electrico",
+    "description": "Porque a ellos les gustan",
+    "price": 1000,
+    "discount": 30,
+    "image": "img-zapatillas-ua-electrico.jpg",
+    "category": "offer"
+  },
+  {
+    "id": 12,
+    "name": "Zapatillas UA Running Menta",
+    "description": "Super comodos al momento de trotar",
+    "price": 11290,
+    "discount": 5,
+    "image": "img-zapatillas-ua-negromenta.jpg",
+    "category": "in-sale",
+    "size": 26
+  }
 ]
