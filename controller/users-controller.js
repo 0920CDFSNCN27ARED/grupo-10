@@ -11,10 +11,10 @@ module.exports = {
         });
 
         if (!user) {
-            return res.redirect("users/login");
+            return res.redirect("/login");
         }
 
-        return res.redirect("index");
+        return res.redirect("/");
     },
 
     register: (req, res) => {
@@ -35,7 +35,7 @@ module.exports = {
         users.push(newUser);
         saveUsers(users);
 
-        res.redirect("login");
+        res.redirect("/login");
     },
 
     showLogin: (req, res) => {

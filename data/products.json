@@ -3,11 +3,10 @@
     "id": 7,
     "name": "Zapatillas UA Running Menta",
     "description": "Super comodos al momento de trotar",
-    "price": 11290,
-    "discount": 5,
+    "price": 14255,
+    "discount": 18,
     "image": "img-zapatillas-ua-negromenta.jpg",
-    "category": "in-sale",
-    "size": 26
+    "category": "offer"
   },
   {
     "id": 9,
@@ -37,5 +36,14 @@
     "image": "img-zapatillas-ua-negromenta.jpg",
     "category": "in-sale",
     "size": 26
+  },
+  {
+    "id": 13,
+    "name": "Zapato niño",
+    "description": "plantilla ortopedica",
+    "price": 5360,
+    "discount": 5,
+    "image": "ceb3a5537467d57b71b45622396aec67",
+    "category": "offer"
   }
 ]
