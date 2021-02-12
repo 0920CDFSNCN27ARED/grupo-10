@@ -100,5 +100,15 @@
         "email": "florconforti1@gmail.com",
         "password": "$2b$12$Xvg/oSjr5GhWjiQtD3O5N.byHTsCNzmT5TiFSuMcGgbIdvm4/4Zqm",
         "sex": "on"
+    },
+    {
+        "id": 12,
+        "full-name": "Daniel",
+        "last-name": "Reyes",
+        "date": "1995-07-07",
+        "username": "danielreyes-7",
+        "email": "dhro7rm@gmail.com",
+        "password": "$2b$12$9Ko0uKUwRSuaslMGYFQoeevI5KPhjSln95zI9XmTqXRPZaYUV11G.",
+        "sex": "on"
     }
 ]

@@ -6,13 +6,13 @@ module.exports = {
     login: (req, res) => {
         const users = getUsers();
         const user = users.find((users) => {
-            users.user === req.body.user &&
-                bcrypt.compareSync(req.body.password, user.password);
-        });
+            users.username === req.body.username &&
+                bcrypt.compareSync(req.body.password, users.password);
 
-        if (!user) {
-            return res.redirect("/login");
-        }
+            if (!users) {
+                res.redirect("/users/login");
+            }
+        });
 
         return res.redirect("/");
     },
@@ -35,7 +35,7 @@ module.exports = {
         users.push(newUser);
         saveUsers(users);
 
-        res.redirect("/login");
+        res.redirect("/users/login");
     },
 
     showLogin: (req, res) => {
