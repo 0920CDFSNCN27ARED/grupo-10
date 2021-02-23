@@ -18,5 +18,12 @@ module.exports = (sequelize, dataTypes) => {
 
     const Group = sequelize.define(alias, cols, config);
 
+    Group.associate = function (models) {
+        Group.hasMany(models.Users, {
+            as: "users",
+            foreignKey: "id_group",
+        });
+    };
+
     return Group;
 };
