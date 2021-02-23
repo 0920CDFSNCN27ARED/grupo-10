@@ -1,3 +1,4 @@
+const db = require("../db/models");
 const getUsers = require("../utils/get-users");
 const saveUsers = require("../utils/save-users");
 const bcrypt = require("bcrypt");

@@ -1,4 +1,5 @@
 //requiere getProducts.
+const db = require("../db/models");
 const getProducts = require("../utils/getProducts");
 const toThousand = require("../utils/to-thousand");
 const saveProducts = require("../utils/save-products");
@@ -74,27 +75,23 @@ module.exports = {
             return prod.id == req.params.id;
         });
 
-        console.log("productCopy",productCopy)
+        console.log("productCopy", productCopy);
 
-        var productToEdit =  productCopy ;
-
+        var productToEdit = productCopy;
 
         const filename = req.file ? req.file.filename : productToEdit.image;
         const idEdit = req.params.id;
 
+        (productToEdit.name = req.body.name),
+            (productToEdit.description = req.body.description),
+            (productToEdit.price = Number(req.body.price)),
+            (productToEdit.discount = Number(req.body.discount)),
+            (productToEdit.image = filename),
+            (productToEdit.size = req.body.size),
+            (productToEdit.category = req.body.category),
+            console.log("productToEdit", productToEdit);
 
-        productToEdit.name = req.body.name,
-        productToEdit.description = req.body.description,
-        productToEdit.price = Number(req.body.price),
-        productToEdit.discount = Number(req.body.discount),
-        productToEdit.image = filename,
-        productToEdit.size = req.body.size,
-        productToEdit.category = req.body.category,
-
-        console.log("productToEdit",productToEdit)
-
-
-        console.log("products",products)
+        console.log("products", products);
 
         saveProducts(products);
 
