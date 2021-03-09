@@ -12,5 +12,4 @@ function getProducts() {
 }
 
 //exporta db.
-module.exports = getProducts;
- */
+module.exports = getProducts; */

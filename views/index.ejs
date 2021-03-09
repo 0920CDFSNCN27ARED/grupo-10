@@ -11,8 +11,8 @@
                 <h2>Productos destacados</h2>
                 <div class="flex margin-5 md-flex lg-flex">
                     <% products.forEach((product, i) => { %> <%-
-                    include('products/product-card', {product: db.Product})%> <%
-                    }) %>
+                    include('products/product-card', {product: product})%> <% })
+                    %>
                 </div>
             </section>
             <section>

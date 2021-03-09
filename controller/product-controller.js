@@ -1,4 +1,5 @@
 //requiere getProducts.
+/* const { where } = require("sequelize/types"); */
 const db = require("../db/models");
 //const getProducts = require("../utils/getProducts");
 const toThousand = require("../utils/to-thousand");
@@ -24,6 +25,49 @@ module.exports = {
         });
         res.redirect("/products");
     },
+    detail: (req, res) => {
+        db.Products.findByPk(req.params.id).then(function (product) {
+            res.render("products/detail", { product: product });
+        });
+    },
+    showEdit: (req, res) => {
+        db.Products.findByPk(req.params.id).then(function (product) {
+            res.render("products/edit", product);
+        });
+
+        /*  if (req.params.id == null) {
+            return res.status(404).send("404 NOT FOUND!");
+        } */
+    },
+
+    edit: (req, res) => {
+        db.Products.update(
+            {
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                discount: req.body.discount,
+                /* id_category: req.body.id_category, */
+                imagen: req.body.imagen,
+            },
+            {
+                where: {
+                    id: req.params.id,
+                },
+            }
+        );
+        res.redirect(`/products/${req.params.id}/detail`);
+    },
+
+    delete: (req, res) => {
+        db.Product.destroy({
+            where: {
+                id: req.params.id,
+            },
+        });
+        res.redirect("/products");
+    },
+
     /* getList:  (req, res) => {
         const products = getProducts();
 

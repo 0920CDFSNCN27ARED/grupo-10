@@ -20,7 +20,7 @@ app.use(express.json());
 
 const productRouter = require("./routes/product-router");
 const usersRouter = require("./routes/users-router");
-/* const getProducts = require("./utils/getProducts"); */
+const getProducts = require("./utils/getProducts");
 const toThousand = require("./utils/to-thousand");
 const getUsers = require("./utils/get-users");
 const db = require("./db/models");
@@ -38,8 +38,9 @@ app.listen(3000, () => {
 // ROUTES
 
 app.get("/", (req, res) => {
-    /* const products = getProducts(); */
-    res.render("index", { products: db.Products });
+    db.Products.findAll().then(function (products) {
+        res.render("index", { products: products });
+    });
 });
 
 app.use("/products", productRouter);
