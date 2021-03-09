@@ -1,4 +1,4 @@
-const fs = require("fs");
+/* const fs = require("fs");
 const path = require("path");
 
 function getProducts() {
@@ -13,3 +13,4 @@ function getProducts() {
 
 //exporta db.
 module.exports = getProducts;
+ */

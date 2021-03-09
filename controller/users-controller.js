@@ -1,4 +1,4 @@
-const db = require("../db/models");
+const db = require("../db/models/Users");
 const getUsers = require("../utils/get-users");
 const saveUsers = require("../utils/save-users");
 const bcrypt = require("bcrypt");
@@ -19,7 +19,13 @@ module.exports = {
     },
 
     register: (req, res) => {
-        const users = getUsers();
+        db.Users.create({
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            password: req.body.password,
+        });
+        /* const users = getUsers();
 
         const lastUserIndex = users.length - 1;
         const lastUser = users[lastUserIndex];
@@ -34,7 +40,7 @@ module.exports = {
         };
 
         users.push(newUser);
-        saveUsers(users);
+        saveUsers(users);*/
 
         res.redirect("/users/login");
     },

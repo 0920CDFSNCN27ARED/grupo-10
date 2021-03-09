@@ -1,11 +1,30 @@
 //requiere getProducts.
 const db = require("../db/models");
-const getProducts = require("../utils/getProducts");
+//const getProducts = require("../utils/getProducts");
 const toThousand = require("../utils/to-thousand");
-const saveProducts = require("../utils/save-products");
+//const saveProducts = require("../utils/save-products");
 
 module.exports = {
     getList: (req, res) => {
+        db.Products.findAll().then(function (products) {
+            res.render("products/list", { products: products, toThousand });
+        });
+    },
+    showCreate: (req, res) => {
+        res.render("products/create");
+    },
+    create: (req, res) => {
+        db.Products.create({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            discount: req.body.discount,
+            /* id_category: req.body.id_category, */
+            imagenes: req.body.imagenes,
+        });
+        res.redirect("/products");
+    },
+    /* getList:  (req, res) => {
         const products = getProducts();
 
         res.render("products/list", {
@@ -111,4 +130,5 @@ module.exports = {
 
         res.redirect("/products");
     },
+*/
 };

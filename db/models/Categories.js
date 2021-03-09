@@ -18,12 +18,12 @@ module.exports = (sequelize, dataTypes) => {
 
     const Categories = sequelize.define(alias, cols, config);
 
-    Categories.associate = function (models) {
+    /*     Categories.associate = function (models) {
         Group.hasMany(models.Products, {
             as: "products",
             foreignKey: "id_category",
         });
-    };
+    }; */
 
     return Categories;
 };

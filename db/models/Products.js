@@ -14,17 +14,14 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
         },
         price: {
-            type: dataTypes.DOBLE,
+            type: dataTypes.INTEGER,
         },
         discount: {
             type: dataTypes.INTEGER,
         },
-        id_category: {
+        /*     id_category: {
             type: dataTypes.INTEGER,
-        },
-        size: {
-            type: dataTypes.INTEGER,
-        },
+        }, */
     };
     const config = {
         tableName: "products",
@@ -34,11 +31,11 @@ module.exports = (sequelize, dataTypes) => {
     const Products = sequelize.define(alias, cols, config);
 
     Products.associate = function (models) {
-        Products.belongsTo(models.Categories, {
+        /* Products.belongsTo(models.Categories, {
             as: "categories",
             foreignKey: "id_category",
         });
-
+ */
         Products.belongsToMany(models.Users, {
             as: "users",
             through: "users_products",
