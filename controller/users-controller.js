@@ -1,25 +1,28 @@
 const db = require("../db/models/Users");
-const getUsers = require("../utils/get-users");
-const saveUsers = require("../utils/save-users");
 const bcrypt = require("bcrypt");
 const { check, validationResult, body } = require("express-validator");
+const session = require("express-session");
 
 module.exports = {
-    login: (req, res) => {
-        db.Users.findAll().then(function (users) {
-            users.username === req.body.username &&
-                bcrypt.compareSync(req.body.password, users.password);
+    login: async (req, res) => {
+        const errors = validationResult(req);
 
-            if (!users) {
-                res.redirect("/users/login");
+        if (errors.isEmpty()) {
+            const users = await db.Users.findOne({
+                where: { email: req.body.email },
+            });
+            console.log(users);
+            if (user && bcrypt.compareSync(req.body.password, users.password)) {
+                req.session.loggedUser = user.id;
+                req.session.loggedUserEmail = user.email;
             }
-        });
-
-        return res.redirect("/");
+        } else {
+            return res.render("login", { errors: errors });
+        }
     },
 
     register: (req, res, next) => {
-        const errors = validatorResult(req);
+        const errors = validationResult(req);
 
         if (errors.isEmpty()) {
             db.Users.create({
@@ -30,7 +33,7 @@ module.exports = {
             });
             res.redirect("/users/login");
         } else {
-            res.render("/users/register", { errors: errors.errors });
+            res.render("/users/register", { errors: errors });
         }
         /* const users = getUsers();
 
