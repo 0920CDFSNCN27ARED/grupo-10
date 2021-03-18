@@ -1,23 +1,24 @@
-const db = require("../db/models/Users");
+const db = require("../db/models");
 const bcrypt = require("bcrypt");
 const { check, validationResult, body } = require("express-validator");
-const session = require("express-session");
+const Users = require("../db/models/Users");
 
 module.exports = {
     login: async (req, res) => {
         const errors = validationResult(req);
+        /* const usuarioALoguearse; */
 
         if (errors.isEmpty()) {
-            const users = await db.Users.findOne({
+            const user = await db.Users.findOne({
                 where: { email: req.body.email },
             });
-            console.log(users);
-            if (user && bcrypt.compareSync(req.body.password, users.password)) {
-                req.session.loggedUser = user.id;
+            console.log(user);
+            if (user && (req.body.password = user.password)) {
+                req.session.loggedUserId = user.id;
                 req.session.loggedUserEmail = user.email;
             }
         } else {
-            return res.render("login", { errors: errors });
+            res.render("login");
         }
     },
 
@@ -29,32 +30,18 @@ module.exports = {
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
                 email: req.body.email,
-                password: req.body.password,
+                password: bcrypt.hashSync(req.body.password, 10),
+                username: req.body.username,
             });
-            res.redirect("/users/login");
+
+            res.redirect("/views/users/login");
         } else {
-            res.render("/users/register", { errors: errors });
+            res.render("register", { errors: errors });
         }
-        /* const users = getUsers();
-
-        const lastUserIndex = users.length - 1;
-        const lastUser = users[lastUserIndex];
-        const newId = lastUser ? lastUser.id + 1 : 1;
-
-        delete req.body.password_confirm;
-
-        const newUser = {
-            id: newId,
-            ...req.body,
-            password: bcrypt.hashSync(req.body.password, 12),
-        };
-
-        users.push(newUser);
-        saveUsers(users);*/
     },
 
     showLogin: (req, res) => {
-        res.render("users/login");
+        res.render("users/login", { user: req.loggedUser });
     },
 
     showCreate: (req, res) => {

@@ -18,7 +18,7 @@ module.exports = {
             price: req.body.price,
             discount: req.body.discount,
             /* id_category: req.body.id_category, */
-            imagenes: req.body.imagenes,
+            imagenes: req.file[0].filename,
         });
         res.redirect("/products");
     },
@@ -45,7 +45,7 @@ module.exports = {
                 price: req.body.price,
                 discount: req.body.discount,
                 /* id_category: req.body.id_category, */
-                imagen: req.body.imagen,
+                image: req.files[0].filename,
             },
             {
                 where: {

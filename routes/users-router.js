@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const { check, validationResult, body } = require("express-validator");
 const userController = require("../controller/users-controller");
-const session = require("express-session");
 
 router.get("/login", userController.showLogin);
 router.post(
@@ -21,7 +20,7 @@ router.post(
     "/",
     [
         check("first_name").isLength({ min: 2 }),
-        check("last-name").isLength({ min: 2 }),
+        check("last_name").isLength({ min: 2 }),
         check("date").isDate(),
         check("email").isEmail().withMessage("Debe ser un email valido"),
         check("password")

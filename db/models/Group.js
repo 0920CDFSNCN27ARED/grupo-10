@@ -1,4 +1,4 @@
-module.exports = (sequelize, dataTypes) => {
+/* module.exports = (sequelize, dataTypes) => {
     const alias = "Group";
 
     const cols = {
@@ -20,10 +20,10 @@ module.exports = (sequelize, dataTypes) => {
 
     Group.associate = function (models) {
         Group.hasMany(models.Users, {
-            as: "users",
+            as: "User",
             foreignKey: "id_group",
         });
     };
 
     return Group;
-};
+}; */
