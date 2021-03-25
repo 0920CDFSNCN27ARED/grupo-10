@@ -7,9 +7,13 @@ router.get("/login", userController.showLogin);
 router.post(
     "/",
     [
-        check("email").isEmail().withMessage("Debe ingresar un e-mail valido"),
+        check("email")
+            .isEmail()
+            .notEmpty()
+            .withMessage("Debe ingresar un e-mail valido"),
         check("password")
             .isLength({ min: 8, max: undefined })
+            .notEmpty()
             .withMessage("la contraseña debe tener al menos 8 caracteres"),
     ],
     userController.login
@@ -19,11 +23,15 @@ router.get("/register", userController.showCreate);
 router.post(
     "/",
     [
-        check("first_name").isLength({ min: 2 }),
-        check("last_name").isLength({ min: 2 }),
-        check("date").isDate(),
-        check("email").isEmail().withMessage("Debe ser un email valido"),
+        check("first_name").notEmpty().isLength({ min: 2 }),
+        check("last_name").notEmpty().isLength({ min: 2 }),
+        check("date").notEmpty().isDate(),
+        check("email")
+            .notEmpty()
+            .isEmail()
+            .withMessage("Debe ser un email valido"),
         check("password")
+            .notEmpty()
             .isLength({ min: 8, max: undefined })
             .withMessage("La contaseña debe tener al menos 8 caracteres"),
     ],

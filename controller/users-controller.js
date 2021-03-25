@@ -4,25 +4,26 @@ const { check, validationResult, body } = require("express-validator");
 const Users = require("../db/models/Users");
 
 module.exports = {
-    login: async (req, res) => {
+    login: (req, res) => {
         const errors = validationResult(req);
-        /* const usuarioALoguearse; */
 
+        console.log(req.body);
         if (errors.isEmpty()) {
-            const user = await db.Users.findOne({
+            const user = db.Users.findOne({
                 where: { email: req.body.email },
             });
             console.log(user);
-            if (user && (req.body.password = user.password)) {
-                req.session.loggedUserId = user.id;
-                req.session.loggedUserEmail = user.email;
-            }
+        }
+
+        if (user && (req.body.password = user.password)) {
+            req.session.loggedUserId = user.id;
+            req.session.loggedUserEmail = user.email;
         } else {
-            res.render("login");
+            res.render("users/login", { errors: errors.errors });
         }
     },
 
-    register: (req, res, next) => {
+    register: (req, res) => {
         const errors = validationResult(req);
 
         if (errors.isEmpty()) {
@@ -34,14 +35,14 @@ module.exports = {
                 username: req.body.username,
             });
 
-            res.redirect("/views/users/login");
+            res.redirect("/login");
         } else {
-            res.render("register", { errors: errors });
+            res.render("user/register", { errors: errors.errors });
         }
     },
 
     showLogin: (req, res) => {
-        res.render("users/login", { user: req.loggedUser });
+        res.render("users/login");
     },
 
     showCreate: (req, res) => {

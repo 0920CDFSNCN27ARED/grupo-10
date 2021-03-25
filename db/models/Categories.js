@@ -1,4 +1,4 @@
-module.exports = (sequelize, dataTypes) => {
+/* module.exports = (sequelize, dataTypes) => {
     const alias = "Categories";
 
     const cols = {
@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
             as: "products",
             foreignKey: "id_category",
         });
-    }; */
+    }; 
 
     return Categories;
-};
+}; */

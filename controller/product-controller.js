@@ -12,14 +12,16 @@ module.exports = {
         res.render("products/create");
     },
     create: (req, res) => {
+        console.log(req.body);
         db.Products.create({
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
             discount: req.body.discount,
             /* id_category: req.body.id_category, */
-            imagenes: req.file[0].filename,
+            image: req.file[0].filename,
         });
+
         res.redirect("/products");
     },
     detail: (req, res) => {

@@ -23,3 +23,13 @@
 8. banco de imagenes https://pixabay.com/es/, https://www.stickpng.com/, http://www.pngall.com/, https://pngtree.com/, https://freepngimg.com/, https://unsplash.com/, https://gratisography.com/
 
 9. color para banner y/o img banner = #D70036
+
+validator.isStrongPassword,
+{
+minLength: 8,
+minLowercase: 1,
+minUppercase: 1,
+minNumbers: 1,
+minSymbols: 1,
+returnScore: false,
+},
