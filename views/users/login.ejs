@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <%- include("../partials/head", { title: "Login" }) %>
+        <script src="../../public/js/validate-login.js"></script>
     </head>
     <body>
         <%- include("../partials/header") %>
@@ -9,7 +10,7 @@
         <main class="reg-log">
             <h2 class="reg-log-box">Inicia Sesíon</h2>
 
-            <form action="/users" method="POST">
+            <form id="login-form" action="/users" method="POST">
                 <div class="reg-log-box">
                     <p><label for="user">Email</label></p>
                     <input

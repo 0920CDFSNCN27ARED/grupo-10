@@ -2,13 +2,16 @@
 <html lang="en">
     <head>
         <%- include('../partials/head', {title: 'Edición de producto'}) %>
+        <script src="../../public/js/validate-edit-product.js"></script>
     </head>
     <body>
         <%- include('../partials/header') %>
         <main>
             <div>
                 <h2>Edición del Producto: <%= product.name %></h2>
+                <div id="errors-list"><ul></ul></div>
                 <form
+                    id="edit-product-form"
                     action="/products/<%= product.id %>/edit?_method=PUT"
                     method="POST"
                     enctype="multipart/form-data"

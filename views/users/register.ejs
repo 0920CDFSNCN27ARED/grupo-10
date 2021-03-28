@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <%- include("../partials/head", { title: "Registrate" }) %>
+        <script src="../../public/js/validate-register.js"></script>
     </head>
 
     <body>
@@ -9,7 +10,8 @@
 
         <main class="reg-log">
             <h2 class="reg-log-box">Crea tu cuenta</h2>
-            <form action="/users" method="POST">
+            <div id="errors-list"><ul></ul></div>
+            <form id="register-form" action="/users" method="POST">
                 <div class="reg-log-box">
                     <p><label for="name">Nombre Completo:</label></p>
                     <input
@@ -27,8 +29,8 @@
                         placeholder="Ingrese apellido"
                     />
 
-                    <!--                     <p><label for="date">Fecha de nacimiento</label></p>
-                    <input type="date" id="date" name="date" /> -->
+                    <p><label for="date">Fecha de nacimiento</label></p>
+                    <input type="date" id="date" name="date" />
 
                     <p><label for="username">Nombre de Usuario:</label></p>
                     <input
@@ -63,11 +65,10 @@
                     <span><input type="radio" name="sex" /> Femenino</span>
                     <span><input type="radio" name="sex" /> Otros</span>
                          -->
-                    <p>
-                        <button type="submit">Registrar</button>
-                        <button type="reset">Limpiar</button>
-                    </p>
-                </div>
+                <p>
+                    <button type="submit">Registrar</button>
+                    <button type="reset">Limpiar</button>
+                </p>
             </form>
         </main>
         <%- include("../partials/footer") %>
