@@ -11,7 +11,7 @@ module.exports = {
     showCreate: (req, res) => {
         res.render("products/create");
     },
-    create: (req, res) => {
+    create: function (req, res) {
         console.log(req.body);
         db.Products.create({
             name: req.body.name,
