@@ -55,7 +55,37 @@ router.post(
 );
 router.get("/:id/detail", productController.detail);
 router.get("/:id/edit", productController.showEdit);
-router.put("/:id/edit", upload.any(), productController.edit);
+router.put(
+    "/:id/edit",
+    upload.any(),
+    [
+        check("name")
+            .isLength()
+            .withMessage("Debe ingresar el nombre del Producto"),
+        check("description")
+            .isLength({ min: 2 })
+            .withMessage("Debe Agregar una descripcion del producto"),
+        check("price")
+            .isNumeric()
+            .withMessage("Debe ingresar el precio del prducto"),
+        body("image").custom(function (value) {
+            const extension = path.extname(req.file[0].filename).toLowerCase();
+            switch (extension) {
+                case ".jpg":
+                    return ".jpg";
+                case ".jpeg":
+                    return ".jpeg";
+                case ".png":
+                    return ".png";
+                default:
+                    throw new Error(
+                        "Debe ingresar una imagen con extencion valida (.jpg, .jpeg, .png)"
+                    );
+            }
+        }),
+    ],
+    productController.edit
+);
 router.delete("/:id", productController.delete);
 
 module.exports = router;

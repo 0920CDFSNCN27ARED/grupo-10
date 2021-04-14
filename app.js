@@ -29,8 +29,8 @@ app.locals.toThousand = toThousand;
 
 // PORT
 
-app.listen(3000, () => {
-    console.log("Servidor funcionando en puerto 3000");
+app.listen(3030, () => {
+    console.log("Servidor funcionando en puerto 3030");
 });
 
 // ROUTES

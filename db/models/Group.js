@@ -1,4 +1,4 @@
-/* module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     const alias = "Group";
 
     const cols = {
@@ -18,12 +18,12 @@
 
     const Group = sequelize.define(alias, cols, config);
 
-    Group.associate = function (models) {
+    /*     Group.associate = function (models) {
         Group.hasMany(models.Users, {
             as: "User",
             foreignKey: "id_group",
         });
-    };
+    }; */
 
     return Group;
-}; */
+};

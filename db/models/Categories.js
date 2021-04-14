@@ -1,4 +1,4 @@
-/* module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     const alias = "Categories";
 
     const cols = {
@@ -18,12 +18,12 @@
 
     const Categories = sequelize.define(alias, cols, config);
 
-    /*     Categories.associate = function (models) {
-        Group.hasMany(models.Products, {
+    /* Categories.associate = function (models) {
+        Categories.hasMany(models.Products, {
             as: "products",
             foreignKey: "id_category",
         });
-    }; 
+    }; */
 
     return Categories;
-}; */
+};

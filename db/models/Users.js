@@ -26,9 +26,9 @@ module.exports = (sequelize, dataTypes) => {
         password: {
             type: dataTypes.STRING,
         },
-        id_group: {
+        /* id_group: {
             type: dataTypes.INTEGER,
-        },
+        }, */
     };
     const config = {
         tableName: "users",
@@ -37,7 +37,7 @@ module.exports = (sequelize, dataTypes) => {
 
     const Users = sequelize.define(alias, cols, config);
 
-    /*     Users.associate = function (models) {
+    /* Users.associate = function (models) {
         Users.belongsTo(models.Group, {
             as: "group",
             foreignKey: "id_group",

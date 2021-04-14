@@ -1,11 +1,13 @@
 const db = require("../db/models");
 const toThousand = require("../utils/to-thousand");
-//const saveProducts = require("../utils/save-products");
 
 module.exports = {
     getList: (req, res) => {
         db.Products.findAll().then(function (products) {
-            res.render("products/list", { products: products, toThousand });
+            return res.render("products/list", {
+                products: products,
+                toThousand,
+            });
         });
     },
     showCreate: (req, res) => {
@@ -19,7 +21,7 @@ module.exports = {
             price: req.body.price,
             discount: req.body.discount,
             /* id_category: req.body.id_category, */
-            image: req.file[0].filename,
+            image: req.files[0].filename,
         });
 
         res.redirect("/products");
@@ -49,6 +51,7 @@ module.exports = {
                 /* id_category: req.body.id_category, */
                 image: req.files[0].filename,
             },
+
             {
                 where: {
                     id: req.params.id,
@@ -59,7 +62,7 @@ module.exports = {
     },
 
     delete: (req, res) => {
-        db.Product.destroy({
+        db.Products.destroy({
             where: {
                 id: req.params.id,
             },
