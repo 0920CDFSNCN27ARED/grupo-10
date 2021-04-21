@@ -1,23 +1,24 @@
 const db = require("../db/models");
 const bcrypt = require("bcrypt");
 const { check, validationResult, body } = require("express-validator");
-const Users = require("../db/models/Users");
 
 module.exports = {
-    login: (req, res) => {
+    login: async (req, res) => {
         const errors = validationResult(req);
 
-        console.log(req.body);
         if (errors.isEmpty()) {
-            const user = db.Users.findOne({
+            const user = await db.Users.findOne({
                 where: { email: req.body.email },
             });
-            console.log(user);
-        }
+            /* console.log(user); */
 
-        if (user && (req.body.password = user.password)) {
-            req.session.loggedUserId = user.id;
-            req.session.loggedUserEmail = user.email;
+            if (user && bcrypt.compareSync(req.body.password, user.password)) {
+                req.session.loggedUserId = user.id;
+                req.session.loggedUserEmail = user.email;
+
+                return res.redirect("/");
+            }
+            return res.redirect("/");
         } else {
             res.render("users/login", { errors: errors.errors });
         }
@@ -35,9 +36,9 @@ module.exports = {
                 username: req.body.username,
             });
 
-            res.redirect("/login");
+            res.redirect("users/login");
         } else {
-            res.render("user/register", { errors: errors.errors });
+            return res.render("users/register", { errors: errors.errors });
         }
     },
 

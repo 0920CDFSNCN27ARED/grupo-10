@@ -39,12 +39,12 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "id_category",
         });
  */
-        Products.belongsToMany(models.Users, {
+        /*  Products.belongsToMany(models.Users, {
             as: "users",
             through: "users_products",
             foreignKey: "id_products",
             otherKey: "id_users",
-        });
+        }); */
     };
 
     return Products;
